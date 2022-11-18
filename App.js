@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import PessoaAddTela from "./telas/PessoaAddTela";
+
+//cria a pilha
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    /* integração entre o sistema operacional e a navegação */
+    <NavigationContainer> 
+      <Stack.Navigator
+        /* onde escolho qual tela vai parecer primeiro, quando eu iniciar o app */
+        initialRouteName="PessoaAdd">
+        <Stack.Screen
+          name="PessoaAdd"
+          component={PessoaAddTela}/>
+        <Stack.Screen
+          name="PessoaList"
+          component={PessoaAddTela}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
