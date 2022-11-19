@@ -1,7 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import PessoaAddTela from "./telas/PessoaAddTela";
 import PessoaListTela from "./telas/PessoaListTela";
+
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 //cria a pilha
 const Stack = createNativeStackNavigator()
