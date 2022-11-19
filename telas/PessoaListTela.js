@@ -1,12 +1,11 @@
 //atalho para criar componente rnfes//
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import React from 'react'
+import PessoaListComponente from '../componentes/PessoaListComponente'
 
-const PessoaListTela = () => {
+const PessoaListTela = ({navigation}) => {
   return (
-    <View>
-      <Text>PessoaListTela</Text>
-    </View>
+    <PessoaListComponente navigation={navigation}/>
   )
 }
 

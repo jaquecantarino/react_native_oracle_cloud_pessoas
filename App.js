@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import PessoaAddTela from "./telas/PessoaAddTela";
+import PessoaListTela from "./telas/PessoaListTela";
 
 //cria a pilha
 const Stack = createNativeStackNavigator()
@@ -17,7 +18,7 @@ export default function App() {
           component={PessoaAddTela}/>
         <Stack.Screen
           name="PessoaList"
-          component={PessoaAddTela}/>
+          component={PessoaListTela}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
